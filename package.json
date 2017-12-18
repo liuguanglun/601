@@ -1,0 +1,41 @@
+{
+  "name": "Xiaoneng",
+  "version": "1.0.0",
+  "description": "小能在线客服系统",
+  "main": "main.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "electron ./",
+    "start1": "./node_modules/.bin/electron ./",
+    "package:mac": "electron-packager . --overwrite --asar --platform=darwin --arch=x64 --prune --out=E://Package_xiaoneng --icon=./windows/image/XiaoNeng.png",
+    "package:darwin": "electron-packager ./  --platform=darwin --arch=x64 --electronVersion=1.4.0 --asar --appVersion=7.0.0 --prune --out=E://Package_xiaoneng --overwrite --icon=./src/assets/XiaoNeng.icns --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=docs",
+    "package:mas": "electron-packager ./ Xiaoneng --platform=mas --arch=x64 --electronVersion=1.4.0 --asar --appVersion=7.0.0 --prune --out=E://Package_xiaoneng --overwrite --icon=./src/assets/XiaoNeng.icns --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=docs",
+    "package:win": "electron-packager ./ Xiaoneng --platform=win32 --arch=x64  --electronVersion=1.6.2 --asar --appVersion=7.0.0 --prune --out=E://Package_xiaoneng/201711281911_1  --overwrite=true --icon=./src/assets/XiaoNeng.ico --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=docs",
+    "package:win32": "electron-packager ./ Xiaoneng --platform=win32 --arch=ia32  --electronVersion=1.6.2 --asar --appVersion=7.0.0 --prune --out=E://Package_xiaoneng/201712122000  --overwrite=true --icon=./src/assets/XiaoNeng.ico --ignore=node_modules --ignore=README.md --ignore=.gitignore --ignore=docs",
+    "package:linux": "electron-packager ./ Ntalker --platform=linux --arch=x64 --version=1.4.0 --out=./ --asar --overwrite --ignore=node_modules --icon=./windows/image/XiaoNeng.png",
+    "package": "npm run package:darwin && npm run package:win && npm run package:linux"
+  },
+  "keywords": [
+    "Xiaoneng",
+    "小能",
+    "GitHub",
+    "小能客服",
+    "小能科技",
+    "在线客服系统"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "<admin@xiaoneng.cn> (http://xiaoneng.gitbook.io/)",
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-packager": "^8.6.0"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0",
+    "request-progress": "^3.0.0"
+  },
+  "updateUrl": ""
+}
